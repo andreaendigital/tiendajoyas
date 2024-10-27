@@ -20,3 +20,14 @@ app.get("/joyas", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+// Ruta para obtener joyas filtradas
+app.get("/joyas/filtros", async (req, res) => {
+    try {
+      const queryStrings = req.query;
+      const joyas = await obtenerJoyasPorFiltros(queryStrings);
+      res.json(joyas);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
