@@ -22,6 +22,7 @@ app.get("/joyas", async (req, res) => {
 });
 
 // Ruta para obtener joyas filtradas
+
 app.get("/joyas/filtros", async (req, res) => {
     try {
       const queryStrings = req.query;
