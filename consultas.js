@@ -90,5 +90,3 @@ const obtenerJoyas = async ({ limits = 6, order_by = "id_ASC", page = 1 }) => {
   };
   
   module.exports = { obtenerJoyas, obtenerJoyasPorFiltros };
-
-  module.exports = { obtenerJoyas };
